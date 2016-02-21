@@ -1,5 +1,5 @@
 {
-  "name": "ag-grid-themes",
+  "name": "@jonrimmer/ag-grid-themes",
   "version": "1.0.0",
   "description": "Themes for ag-Grid",
   "main": "index.js",
