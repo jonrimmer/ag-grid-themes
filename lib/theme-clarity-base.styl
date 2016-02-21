@@ -1,0 +1,257 @@
+clarity-theme(base)
+    headerColor = base;
+    headerBorder = 1px solid rgba(0, 0, 0, .2);
+    headerTopPadding = 10px;
+    iconColor = saturate(lighten(base, 75%), 50%);
+    menuWidth = 26px;
+    resizeBarWidth = 5px;
+    cellSidePadding = 14px;
+    cellTopPadding = 12px;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+
+    .ag-cell
+        padding: cellTopPadding cellSidePadding cellTopPadding cellSidePadding;
+
+    .ag-column-moving .ag-cell
+        transition: left 0.2s;
+
+    .ag-cell:focus
+        //outline: none;
+
+    .ag-cell-focus
+        border: 1px solid darkgrey;
+        padding: (cellTopPadding - 1px) cellSidePadding (cellTopPadding - 1px) (cellSidePadding - 1px);
+
+    .ag-cell-no-focus
+        border-right: 1px solid rgba(0, 0, 0, .05);
+
+    .ag-cell-first-right-pinned
+        border-left: 1px dotted grey;
+
+    .ag-header
+        background: headerColor;
+        color: #FFF;
+        font-weight: semi-bold;
+
+    .ag-no-scrolls .ag-header-container
+        border-bottom: headerBorder;
+
+    .ag-header-cell
+        position: relative;
+        border-right: headerBorder;
+        text-align: left;
+
+    .ag-header-cell-moving .ag-header-cell-label
+        opacity: 0.0;
+
+    .ag-header-cell-moving
+        background-color rgb(190,190,190);
+
+    .ag-header-cell-moving-clone
+        border-right: 1px solid grey;
+        border-left: 1px solid grey;
+        background-color:rgba(220, 220, 220, 0.8);
+
+    .ag-header-group-cell
+        position: relative;
+        border-right: headerBorder;
+
+    .ag-header-group-cell-with-group
+        border-bottom: headerBorder;
+
+    .ag-header-cell-label
+        padding: headerTopPadding menuWidth headerTopPadding cellSidePadding;
+        cursor: pointer;
+        .ag-header-icon
+            color: iconColor;
+            margin-right: 2px;
+
+    .ag-header-cell-text
+        padding-left: 0;
+
+    .ag-header-group-cell-label
+        padding: headerTopPadding (resizeBarWidth / 2) headerTopPadding cellSidePadding;
+
+    .ag-header-group-text
+        margin-right: 2px;
+
+    .ag-header-cell-menu-button
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: menuWidth;
+        padding: 2px;
+        cursor: pointer;
+        background: rgba(0, 0, 0, .04);
+        &:hover
+            background: rgba(0, 0, 0, .08);
+        svg
+            position: absolute;
+            top: 14px;
+            left: 7px;
+            fill: #FFF;
+
+    .ag-header-expand-icon
+        cursor: pointer;
+
+    .ag-header-cell-resize
+        width: resizeBarWidth;
+        position: absolute;
+        z-index: 1;
+        right: -(resizeBarWidth / 2);
+        top: 0;
+        bottom: 0;
+
+    .ag-pinned-right-header
+        border-left: 1px solid grey;
+
+    .ag-row-selected
+        background-color: powderblue !important;
+
+    .ag-row
+        border-bottom: 1px solid rgba(0, 0, 0, .15);
+
+    .ag-overlay-loading-wrapper
+        background-color: rgba(255, 255, 255, 0.5);
+
+    .ag-overlay-loading-center
+        background-color: #ffffff;
+        border: 1px solid darkgray;
+        border-radius: 10px;
+        padding: 10px;
+
+    .ag-overlay-no-rows-center
+        background-color: #ffffff;
+        border: 1px solid darkgray;
+        border-radius: 10px;
+        padding: 10px;
+
+    .ag-body
+        background-color: #fff;
+
+    .ag-group-cell-entire-row
+        background-color: #aaa;
+        padding: 4px;
+
+    .ag-footer-cell-entire-row
+        background-color: #aaa;
+        padding: 4px;
+
+    .ag-group-cell
+        font-style: italic;
+
+    .ag-group-expand
+        padding-right 2px;
+
+    .ag-footer-cell
+        font-style: italic;
+
+    .ag-filter-checkbox
+        position: relative;
+        top: 0;
+        left: 2px;
+        margin-right: 8px;
+
+    .ag-filter-header-container
+        border-bottom: 1px solid #E4E4E4;
+        padding: 6px;
+        label
+            margin-bottom: 0;
+
+    .ag-filter-apply-panel
+        border-top: 1px solid lightgrey;
+        padding: 2px;
+
+    .ag-filter
+        background-color: #FFF;
+        border-radius: 3px;
+        border: 1px solid #E4E4E4;
+        &::after
+            position: absolute;
+            content: '';
+            z-index: -1;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            background-color: rgba(245, 245, 245, .7);
+            box-shadow: 0 1px 7px rgba(100, 100, 100, .4);
+            border-radius: 5px;
+        > div > div:not([class])
+            padding: 6px;
+
+    .ag-filter-value
+        margin-left: 0;
+
+    .ag-filter-filter[type=text]
+        margin: 0;
+        width: 100%;
+        padding: 6px;
+        border-radius: 5px;
+        height: 36px;
+        border: 1px solid #CCC;
+
+    .ag-filter-select
+        width: 100%;
+        margin: 0;
+
+    .ag-filter-list-container
+        padding: 6px 0 6px 6px;
+
+    .ag-selection-checkbox
+        margin: 0px 12px 0 0;
+
+    .ag-paging-panel
+        padding: 4px;
+
+    .ag-paging-button
+        margin-left: 4px;
+        margin-right: 4px;
+
+    .ag-paging-row-summary-panel
+        display: inline-block;
+        width: 300px;
+
+    .ag-column-not-visible
+        opacity: 0.75;
+
+    .ag-not-dragging
+        border: 1px solid transparent;
+
+    .ag-drop-target-above
+        //border: 1px solid transparent;
+        border-top: 5px solid darkgrey;
+
+    .ag-drop-target-below
+        //border: 1px solid transparent;
+        border-bottom: 5px solid darkgrey;
+
+    .ag-dragging
+        border: 1px dotted darkgrey;
+
+    .ag-list-item-selected
+        color #f0f0f0;
+
+    .ag-list-item-not-selected
+        font-style italic;
+        color #a0a0a0;
+
+    .ag-tool-panel-container
+        background-color: #eee;
+        box-sizing: border-box;
+        border: 1px solid darkgrey;
+        padding: 4px;
+
+    .ag-list-selection
+        background-color: white;
+        border: 1px solid darkgrey;
+        box-sizing: border-box;
+
+    .ag-popup-list .ag-list-item:hover
+        background-color: lightblue;
+
+    .ag-visible-icons
+        padding-left: 2px;
+        padding-right: 2px;

@@ -1,0 +1,19 @@
+{
+  "name": "ag-grid-themes",
+  "version": "1.0.0",
+  "description": "Themes for ag-Grid",
+  "main": "index.js",
+  "scripts": {
+    "build": "stylus --include node_modules/nib/lib src -o dist",
+    "watch": "stylus --include node_modules/nib/lib --watch src -o dist"
+  },
+  "keywords": [
+    "ag-grid",
+    "themes"
+  ],
+  "author": "Jon Rimmer <jon.rimmer@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "nib": "1.1.0"
+  }
+}

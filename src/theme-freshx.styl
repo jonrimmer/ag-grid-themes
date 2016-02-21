@@ -1,0 +1,227 @@
+@import 'nib'
+
+.ag-freshx
+    headerBorderColor = #AAA;
+    menuButtonWidth = 22px;
+
+    .ag-root
+        border: 1px solid headerBorderColor;
+
+    .ag-cell
+        padding: 3px 4px;
+
+    .ag-column-moving .ag-cell
+        transition: left 0.2s;
+
+    .ag-cell:focus
+        //outline: none;
+
+    .ag-cell-focus
+        border: 1px solid darkgrey;
+        padding: 2px 4px 2px 3px;
+
+    .ag-cell-no-focus
+        border-right: 1px solid rgba(0,0,0, .1);
+
+    .ag-cell-first-right-pinned
+        border-left: 1px dotted grey;
+
+    .ag-header
+        background: linear-gradient(#FFF, #DDD);
+        border-bottom: 1px solid headerBorderColor;
+
+    .ag-no-scrolls .ag-header-container
+        background: linear-gradient(white, lightgrey);
+        border-bottom: 1px solid headerBorderColor;
+
+    .ag-header-cell-resize
+        position: absolute;
+        z-index: 2;
+        right: -3px;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+
+    .ag-header-cell
+        position: relative;
+        border-right: 1px solid headerBorderColor;
+
+    .ag-header-cell-moving .ag-header-cell-label
+        opacity: 0.0;
+
+    .ag-header-cell-moving
+        background-color rgb(190,190,190);
+
+    .ag-header-cell-moving-clone
+        border-right: 1px solid headerBorderColor;
+        border-left: 1px solid headerBorderColor;
+        background-color: rgba(220, 220, 220, 0.8);
+
+    .ag-header-group-cell
+        border-right: 1px solid headerBorderColor;
+
+    .ag-header-group-cell-with-group
+        border-bottom: 1px solid headerBorderColor;
+
+    .ag-header-cell-label
+        text-align: left;
+        padding: 3px menuButtonWidth 3px 4px;
+
+    .ag-header-cell-text
+        // Nothing
+
+    .ag-header-group-cell-label
+        padding: 3px 4px;
+
+    .ag-header-group-text
+        margin-right: 2px;
+
+    .ag-header-cell-menu-button
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: menuButtonWidth;
+        cursor: pointer;
+        text-align: center;
+        padding-top: 3px;
+        box-sizing: content-box;
+
+    .ag-pinned-right-header
+        border-left: 1px solid headerBorderColor;
+
+    .ag-header-cell-menu-button:hover
+        background-color: rgba(0, 0, 0, .05);
+
+    .ag-header-icon
+        color: maroon;
+
+    .ag-row-selected
+        background-color: powderblue !important;
+
+    .ag-body
+        .ag-row-odd
+            background-color: #f6f6f6;
+
+        .ag-row-even
+            background-color: white;
+
+    .ag-floating-top
+        .ag-row
+            background-color: #f0f0f0;
+
+    .ag-floating-bottom
+        .ag-row
+            background-color: #f0f0f0;
+
+    .ag-overlay-loading-wrapper
+        background-color: rgba(255, 255, 255, 0.5);
+
+    .ag-overlay-loading-center
+        background-color: #ffffff;
+        border: 1px solid darkgray;
+        border-radius: 10px;
+        padding: 10px;
+
+    .ag-overlay-no-rows-center
+        background-color: #ffffff;
+        border: 1px solid darkgray;
+        border-radius: 10px;
+        padding: 10px;
+
+    .ag-body
+        background-color: #fafafa;
+
+    .ag-group-cell-entire-row
+        background-color: #aaa;
+        padding: 4px;
+
+    .ag-footer-cell-entire-row
+        background-color: #aaa;
+        padding: 4px;
+
+    .ag-group-cell
+        font-style: italic;
+
+    .ag-group-expand
+        padding-right 2px;
+
+    .ag-footer-cell
+        font-style: italic;
+
+    .ag-filter-checkbox
+        position: relative;
+        top: 2px;
+        left: 2px;
+
+    .ag-filter-header-container
+        border-bottom: 1px solid lightgrey;
+
+    .ag-filter-apply-panel
+        border-top: 1px solid lightgrey;
+        padding: 2px;
+
+    .ag-filter
+        background-color: #FFF;
+        border-radius: 3px;
+        border: 1px solid #CCC;
+
+    .ag-filter-value
+        margin-left: 4px;
+
+    .ag-selection-checkbox
+        margin: 0 6px 0 2px;
+
+    .ag-paging-panel
+        padding: 4px;
+
+    .ag-paging-button
+        margin-left: 4px;
+        margin-right: 4px;
+
+    .ag-paging-row-summary-panel
+        display: inline-block;
+        width: 300px;
+
+    .ag-column-not-visible
+        opacity: 0.75;
+
+    .ag-not-dragging
+        border: 1px solid transparent;
+
+    .ag-drop-target-above
+        //border: 1px solid transparent;
+        border-top: 5px solid darkgrey;
+
+    .ag-drop-target-below
+        //border: 1px solid transparent;
+        border-bottom: 5px solid darkgrey;
+
+    .ag-dragging
+        border: 1px dotted darkgrey;
+
+    .ag-list-item-selected
+        color #f0f0f0;
+
+    .ag-list-item-not-selected
+        font-style italic;
+        color #a0a0a0;
+
+    .ag-tool-panel-container
+        background-color: #eee;
+        box-sizing: border-box;
+        border: 1px solid darkgrey;
+        padding: 4px;
+
+    .ag-list-selection
+        background-color: white;
+        border: 1px solid darkgrey;
+        box-sizing: border-box;
+
+    .ag-popup-list .ag-list-item:hover
+        background-color: lightblue;
+
+    .ag-visible-icons
+        padding-left: 2px;
+        padding-right: 2px;
