@@ -9,6 +9,7 @@ clarity-theme(base)
     cellTopPadding = 12px;
 
     box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+    font-family: sans-serif;
 
     .ag-cell
         padding: cellTopPadding cellSidePadding cellTopPadding cellSidePadding;
@@ -66,6 +67,7 @@ clarity-theme(base)
         .ag-header-icon
             color: iconColor;
             margin-right: 2px;
+            fill: iconColor;
 
     .ag-header-cell-text
         padding-left: 0;
@@ -89,8 +91,8 @@ clarity-theme(base)
             background: rgba(0, 0, 0, .08);
         svg
             position: absolute;
-            top: 14px;
-            left: 7px;
+            top: 12px;
+            left: 9px;
             fill: #FFF;
 
     .ag-header-expand-icon
@@ -147,6 +149,9 @@ clarity-theme(base)
 
     .ag-footer-cell
         font-style: italic;
+        
+    .ag-menu
+        z-index: 1;
 
     .ag-filter-checkbox
         position: relative;
@@ -165,20 +170,6 @@ clarity-theme(base)
         padding: 2px;
 
     .ag-filter
-        background-color: #FFF;
-        border-radius: 3px;
-        border: 1px solid #E4E4E4;
-        &::after
-            position: absolute;
-            content: '';
-            z-index: -1;
-            top: -8px;
-            left: -8px;
-            right: -8px;
-            bottom: -8px;
-            background-color: rgba(245, 245, 245, .7);
-            box-shadow: 0 1px 7px rgba(100, 100, 100, .4);
-            border-radius: 5px;
         > div > div:not([class])
             padding: 6px;
 
@@ -255,3 +246,88 @@ clarity-theme(base)
     .ag-visible-icons
         padding-left: 2px;
         padding-right: 2px;
+        
+        
+    .ag-menu
+        background-color: none;
+        border: none;
+        cursor: default;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        margin-top: -10px;
+        margin-left: 2px;
+        
+        > div:first-child
+            background-color: #FFF;
+            border-radius: 3px;
+            border: 1px solid #E4E4E4;
+        &::after
+            position: absolute;
+            content: '';
+            z-index: -1;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            background-color: rgba(245, 245, 245, .7);
+            box-shadow: 0 1px 7px rgba(100, 100, 100, .4);
+            border-radius: 5px;
+        
+        .ag-tab-header
+            border-bottom: 1px solid #E4E4E4;
+            
+        .ag-tab
+            padding: 8px 10px
+            margin: 4px 2px 0px 2px;
+            background-color: #F2F2F2;
+            display: inline-block;
+            border-right: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-top: 1px solid transparent;
+            border-top-right-radius: 2px;
+            border-top-left-radius: 2px;
+            cursor: pointer;
+            &:not(.ag-tab-selected):hover
+                background-color: #F8F8F8;
+            &:first-child
+                margin-left: 4px;
+
+        .ag-tab-selected
+            background-color: #fff;
+            border-right: 1px solid #CCC;
+            border-left: 1px solid #CCC;
+            border-top: 1px solid #CCC;
+            margin-bottom: -1px;
+            padding-bottom: 9px;
+            
+    menuVPad = 6px;
+
+    .ag-menu-separator
+        border-top: 1px solid #d3d3d3;
+        &:first-child
+            border: none;
+ 
+    .ag-menu-option-active
+        background-color: #bde2e5;
+
+    .ag-menu-option-icon
+        padding: menuVPad 4px menuVPad 8px;
+        vertical-align: middle;
+  
+    .ag-menu-option-text
+        padding: menuVPad 4px;
+        vertical-align: middle;
+
+    .ag-menu-option-shortcut
+        padding: menuVPad 2px menuVPad 20px;
+        vertical-align: middle;
+
+    .ag-menu-option-popup-pointer
+        padding: menuVPad 8px menuVPad 4px;
+        vertical-align: middle;
+
+    .ag-menu-option-disabled
+        opacity: 0.5;
+
+    .ag-menu-column-select-wrapper
+        margin: 2px;
